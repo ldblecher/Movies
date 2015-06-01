@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="809-PR-EJB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V4j-GD-H7h">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -25,11 +25,11 @@
                             <outlet property="delegate" destination="809-PR-EJB" id="JB4-AW-smD"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Watch List" id="EbW-ti-BMV"/>
+                    <navigationItem key="navigationItem" title="Watch List" id="4ph-3c-zFe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXP-2a-wg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257" y="-368"/>
+            <point key="canvasLocation" x="2069" y="-336"/>
         </scene>
         <!--Watched-->
         <scene sceneID="cch-7V-s2u">
@@ -53,11 +53,10 @@
                             <outlet property="delegate" destination="Oj2-fE-waU" id="Yhk-b6-lPX"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Watched" id="cBp-qW-L3F"/>
-                    <navigationItem key="navigationItem" id="ZZ5-5l-Viz"/>
+                    <navigationItem key="navigationItem" title="Watched" id="ZZ5-5l-Viz"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1257" y="397"/>
+            <point key="canvasLocation" x="2069" y="472"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vc1-gO-cpY">
@@ -70,13 +69,55 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="809-PR-EJB" kind="relationship" relationship="viewControllers" id="qVL-dP-ibf"/>
-                        <segue destination="Oj2-fE-waU" kind="relationship" relationship="viewControllers" id="TvA-dw-aAB"/>
+                        <segue destination="dFF-Gq-jER" kind="relationship" relationship="viewControllers" id="qVL-dP-ibf"/>
+                        <segue destination="dzH-1m-TjD" kind="relationship" relationship="viewControllers" id="TvA-dw-aAB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubp-g9-LEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="453" y="132"/>
+            <point key="canvasLocation" x="453" y="131.99999999999997"/>
+        </scene>
+        <!--Watch List-->
+        <scene sceneID="XnL-85-2a2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dFF-Gq-jER" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Watch List" image="list" id="EbW-ti-BMV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FHG-Ob-Kjh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="809-PR-EJB" kind="relationship" relationship="rootViewController" id="d4W-j9-uC3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xz-uQ-twf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="-336"/>
+        </scene>
+        <!--Watched-->
+        <scene sceneID="t0W-oH-xKy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dzH-1m-TjD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Watched" image="check" id="cBp-qW-L3F"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wyw-cz-fGZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Oj2-fE-waU" kind="relationship" relationship="rootViewController" id="HV5-Fg-ZcK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9r-rc-dsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="472"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="check" width="32" height="32"/>
+        <image name="list" width="32" height="32"/>
+    </resources>
 </document>
