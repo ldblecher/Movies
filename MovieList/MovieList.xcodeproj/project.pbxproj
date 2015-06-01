@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3D53E3571B1CF65F006FDD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E3561B1CF65F006FDD99 /* AppDelegate.swift */; };
-		3D53E3591B1CF65F006FDD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E3581B1CF65F006FDD99 /* ViewController.swift */; };
 		3D53E35C1B1CF65F006FDD99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D53E35A1B1CF65F006FDD99 /* Main.storyboard */; };
 		3D53E35E1B1CF65F006FDD99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D53E35D1B1CF65F006FDD99 /* Images.xcassets */; };
 		3D53E3611B1CF65F006FDD99 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D53E35F1B1CF65F006FDD99 /* LaunchScreen.xib */; };
 		3D53E36D1B1CF65F006FDD99 /* MovieListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E36C1B1CF65F006FDD99 /* MovieListTests.swift */; };
+		3D53E3791B1CFF5C006FDD99 /* WatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E3781B1CFF5C006FDD99 /* WatchList.swift */; };
+		3D53E37B1B1CFF71006FDD99 /* Watched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E37A1B1CFF71006FDD99 /* Watched.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		3D53E3511B1CF65F006FDD99 /* MovieList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D53E3551B1CF65F006FDD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D53E3561B1CF65F006FDD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D53E3581B1CF65F006FDD99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D53E35B1B1CF65F006FDD99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D53E35D1B1CF65F006FDD99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3D53E3601B1CF65F006FDD99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3D53E3661B1CF65F006FDD99 /* MovieListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D53E36B1B1CF65F006FDD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D53E36C1B1CF65F006FDD99 /* MovieListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTests.swift; sourceTree = "<group>"; };
+		3D53E3781B1CFF5C006FDD99 /* WatchList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchList.swift; sourceTree = "<group>"; };
+		3D53E37A1B1CFF71006FDD99 /* Watched.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watched.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				3D53E3561B1CF65F006FDD99 /* AppDelegate.swift */,
-				3D53E3581B1CF65F006FDD99 /* ViewController.swift */,
+				3D53E3781B1CFF5C006FDD99 /* WatchList.swift */,
+				3D53E37A1B1CFF71006FDD99 /* Watched.swift */,
 				3D53E35A1B1CF65F006FDD99 /* Main.storyboard */,
 				3D53E35D1B1CF65F006FDD99 /* Images.xcassets */,
 				3D53E35F1B1CF65F006FDD99 /* LaunchScreen.xib */,
@@ -212,8 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D53E3591B1CF65F006FDD99 /* ViewController.swift in Sources */,
+				3D53E37B1B1CFF71006FDD99 /* Watched.swift in Sources */,
 				3D53E3571B1CF65F006FDD99 /* AppDelegate.swift in Sources */,
+				3D53E3791B1CFF5C006FDD99 /* WatchList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
