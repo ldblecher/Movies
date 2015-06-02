@@ -8,10 +8,17 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+    
+    let API = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=9htuhtcb4ymusd73d4z6jxcj"
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var moviesArray: NSArray = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -19,6 +26,16 @@ class SearchTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        var replaced_space = searchText.stringByReplacingOccurrencesOfString(" ", withString: "+")
+        var search_url = NSURL(string: API+"&limit=50&q=\(replaced_space)")
+        let request = NSMutableURLRequest(URL: search_url!)
+        request.timeoutInterval = NSTimeInterval(10)
+        
+        NSURLConnection(
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
