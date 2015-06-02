@@ -7,7 +7,7 @@
         <!--Search-->
         <scene sceneID="qIC-S7-kZt">
             <objects>
-                <tableViewController id="QW9-bu-vS0" sceneMemberID="viewController">
+                <tableViewController id="QW9-bu-vS0" customClass="SearchTableViewController" customModule="MovieList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="t2B-sp-8Nh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
