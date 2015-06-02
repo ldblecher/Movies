@@ -10,8 +10,10 @@ import UIKit
 
 class SearchTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
-    let API = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=9htuhtcb4ymusd73d4z6jxcj"
+    let API = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?"
+    let key = "apikey=yz8aght3p6b47r22wmkyezan"
     
+    @IBOutlet var MovieTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var moviesArray: NSArray = []
@@ -30,10 +32,20 @@ class SearchTableViewController: UITableViewController, UITableViewDataSource, U
 
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         var replaced_space = searchText.stringByReplacingOccurrencesOfString(" ", withString: "+")
-        var search_url = NSURL(string: API+"&limit=50&q=\(replaced_space)")
-        let request = NSMutableURLRequest(URL: search_url!)
-        request.timeoutInterval = NSTimeInterval(10)
+        var final_url = NSURL(string: "\(API)+page_limit=3&page=1&q=\(replaced_space)&\(key)")
+        var request = NSURLRequest(URL: final_url!)
         
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response, data, error) in
+            
+        var errorValue: NSError?
+        if let dictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &errorValue) as? NSDictionary {
+            self.moviesArray = dictionary["movies"] as! NSArray
+        }
+        else{
+            println("Network Error")
+        }
+        })
     }
 
 
@@ -47,24 +59,29 @@ class SearchTableViewController: UITableViewController, UITableViewDataSource, U
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return moviesArray.count
     }
 
-    /*
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        println("hello")
+        let cell = MovieTableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieViewCell
+        
+        let movie = Movie(dictionary: moviesArray[indexPath.row] as! NSDictionary)
+        
+        cell.movieTitle.text = movie.title as String
 
         // Configure the cell...
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

@@ -17,7 +17,7 @@
 		3D53E37F1B1D4496006FDD99 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E37E1B1D4496006FDD99 /* SearchTableViewController.swift */; };
 		3D53E3811B1D4AEA006FDD99 /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E3801B1D4AEA006FDD99 /* MovieViewCell.swift */; };
 		3D53E3831B1D6269006FDD99 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E3821B1D6269006FDD99 /* Movie.swift */; };
-		3D53E3851B1D7A26006FDD99 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E3841B1D7A26006FDD99 /* SwiftyJSON.swift */; };
+		3D53E3871B1D7AA7006FDD99 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53E3861B1D7AA7006FDD99 /* RestApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		3D53E37E1B1D4496006FDD99 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		3D53E3801B1D4AEA006FDD99 /* MovieViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 		3D53E3821B1D6269006FDD99 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		3D53E3841B1D7A26006FDD99 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		3D53E3861B1D7AA7006FDD99 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 				3D53E3801B1D4AEA006FDD99 /* MovieViewCell.swift */,
 				3D53E37E1B1D4496006FDD99 /* SearchTableViewController.swift */,
 				3D53E3821B1D6269006FDD99 /* Movie.swift */,
-				3D53E3841B1D7A26006FDD99 /* SwiftyJSON.swift */,
+				3D53E3861B1D7AA7006FDD99 /* RestApiManager.swift */,
 				3D53E35D1B1CF65F006FDD99 /* Images.xcassets */,
 				3D53E35F1B1CF65F006FDD99 /* LaunchScreen.xib */,
 				3D53E3541B1CF65F006FDD99 /* Supporting Files */,
@@ -229,10 +229,10 @@
 			files = (
 				3D53E37B1B1CFF71006FDD99 /* Watched.swift in Sources */,
 				3D53E3571B1CF65F006FDD99 /* AppDelegate.swift in Sources */,
+				3D53E3871B1D7AA7006FDD99 /* RestApiManager.swift in Sources */,
 				3D53E3831B1D6269006FDD99 /* Movie.swift in Sources */,
 				3D53E3811B1D4AEA006FDD99 /* MovieViewCell.swift in Sources */,
 				3D53E3791B1CFF5C006FDD99 /* WatchList.swift in Sources */,
-				3D53E3851B1D7A26006FDD99 /* SwiftyJSON.swift in Sources */,
 				3D53E37F1B1D4496006FDD99 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
