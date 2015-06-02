@@ -27,13 +27,13 @@ class SearchTableViewController: UITableViewController, UITableViewDataSource, U
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         var replaced_space = searchText.stringByReplacingOccurrencesOfString(" ", withString: "+")
         var search_url = NSURL(string: API+"&limit=50&q=\(replaced_space)")
         let request = NSMutableURLRequest(URL: search_url!)
         request.timeoutInterval = NSTimeInterval(10)
         
-        NSURLConnection(
     }
 
 
