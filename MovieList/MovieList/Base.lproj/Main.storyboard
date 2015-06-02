@@ -21,7 +21,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="rUO-kT-oeu">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="rUO-kT-oeu" customClass="MovieViewCell" customModule="MovieList" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rUO-kT-oeu" id="ozY-MZ-kag">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -43,6 +43,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="movieDescription" destination="oh6-mx-f1i" id="4es-mi-Hmf"/>
+                                    <outlet property="moviePoster" destination="rR8-vX-wh0" id="OhM-jT-yYp"/>
+                                    <outlet property="movieTitle" destination="xrn-Ey-sTR" id="5v2-3T-cIH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
