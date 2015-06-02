@@ -13,7 +13,7 @@ class SearchTableViewController: UITableViewController, UITableViewDataSource, U
     let API = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?"
     let key = "apikey=yz8aght3p6b47r22wmkyezan"
     
-    @IBOutlet var MovieTableView: UITableView!
+    @IBOutlet weak var MovieTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var moviesArray: NSArray = []
@@ -71,7 +71,7 @@ class SearchTableViewController: UITableViewController, UITableViewDataSource, U
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         println("hello")
-        let cell = MovieTableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieViewCell
+        let cell = MovieTableView.dequeueReusableCellWithIdentifier("MovieViewCell", forIndexPath: indexPath) as! MovieViewCell
         
         let movie = Movie(dictionary: moviesArray[indexPath.row] as! NSDictionary)
         
