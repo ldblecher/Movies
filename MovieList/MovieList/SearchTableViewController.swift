@@ -68,7 +68,6 @@ class SearchTableViewController: UITableViewController, UITableViewDataSource, U
         return moviesArray.count
     }
 
-
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         println("hello")
         let cell = MovieTableView.dequeueReusableCellWithIdentifier("MovieViewCell", forIndexPath: indexPath) as! MovieViewCell
