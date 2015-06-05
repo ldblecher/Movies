@@ -59,11 +59,11 @@
                     <connections>
                         <outlet property="MovieTableView" destination="t2B-sp-8Nh" id="Riu-0E-COQ"/>
                         <outlet property="searchBar" destination="0F7-zx-LQQ" id="OEj-EA-Z9b"/>
-                        <outlet property="tableView" destination="t2B-sp-8Nh" id="dc4-BE-Xgd"/>
+                        <outlet property="searchDisplayController" destination="71v-1A-9oA" id="9tU-SR-MGi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtV-9Q-yDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="71v-1A-9oA">
+                <searchDisplayController searchResultsTitle="" id="71v-1A-9oA">
                     <connections>
                         <outlet property="delegate" destination="QW9-bu-vS0" id="O4C-sN-wQN"/>
                         <outlet property="searchContentsController" destination="QW9-bu-vS0" id="SlR-oi-Jh4"/>
@@ -91,7 +91,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="P61-Or-9Vl">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="watchCell" id="P61-Or-9Vl">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P61-Or-9Vl" id="ec7-tJ-6sJ">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -138,7 +138,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HcC-UC-81u">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="watchedCell" id="HcC-UC-81u">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HcC-UC-81u" id="pyO-KR-ZYu">
                                     <autoresizingMask key="autoresizingMask"/>

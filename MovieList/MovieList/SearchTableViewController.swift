@@ -20,7 +20,7 @@ class SearchTableViewController: UITableViewController, UITableViewDataSource, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
+        self.searchBar.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,6 +41,7 @@ class SearchTableViewController: UITableViewController, UITableViewDataSource, U
         var errorValue: NSError?
         if let dictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &errorValue) as? NSDictionary {
             self.moviesArray = dictionary["movies"] as! NSArray
+            println(self.moviesArray)
         }
         else{
             println("Network Error")
@@ -65,12 +66,12 @@ class SearchTableViewController: UITableViewController, UITableViewDataSource, U
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return moviesArray.count
+        return self.moviesArray.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        println("hello")
-        let cell = MovieTableView.dequeueReusableCellWithIdentifier("MovieViewCell", forIndexPath: indexPath) as! MovieViewCell
+        print("hello")
+        let cell = MovieTableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieViewCell
         
         let movie = Movie(dictionary: moviesArray[indexPath.row] as! NSDictionary)
         
